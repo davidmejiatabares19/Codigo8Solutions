@@ -1,0 +1,6 @@
+document.querySelector('#year').textContent=new Date().getFullYear();const f=document.querySelector('#form'),s=document.querySelector('#status'),b=document.querySelector('#send');f.onsubmit=async e=>{e.preventDefault();if(!f.checkValidity()){f.classList.add('was-validated');return}let k=(window.CODIGO8_EMAIL_CONFIG?.WEB3FORMS_ACCESS_KEY||'').trim();if(!k){s.textContent='El envío automático aún no está configurado. Se abrirá tu aplicación de correo.';s.className='alert alert-warning mt-3';let body=encodeURIComponent(`Nombre: ${f.name.value}
+Empresa: ${f.company.value}
+Correo: ${f.email.value}
+Teléfono: ${f.phone.value}
+Servicio: ${f.service.value}
+Mensaje: ${f.message.value}`);location.href=`mailto:davidmejiatabares@gmail.com?subject=Contacto%20Código8&body=${body}`;return}document.querySelector('#key').value=k;b.disabled=true;b.textContent='Enviando...';try{let d=new FormData(f),r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:d}),j=await r.json();if(!j.success)throw 0;s.textContent='Mensaje enviado correctamente.';s.className='alert alert-success mt-3';f.reset()}catch{s.textContent='No fue posible enviar. Usa WhatsApp.';s.className='alert alert-danger mt-3'}finally{b.disabled=false;b.textContent='Enviar mensaje'}};
