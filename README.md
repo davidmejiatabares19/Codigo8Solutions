@@ -10,10 +10,10 @@ Abre `index.html`. Para activar el envío, crea una clave pública gratuita en W
 5. Sube el cambio a GitHub. Cloudflare Pages desplegará automáticamente.
 6. Prueba con Google Tag Assistant y el informe En tiempo real.
 
-La analítica se activa después de que el visitante acepta el aviso. Se registran páginas vistas, clics en WhatsApp y envíos del formulario como `generate_lead`.
+La analítica se activa al cargar la página, sin aviso de consentimiento (la página de privacidad informa su uso). Se registran páginas vistas, clics en WhatsApp y envíos del formulario como `generate_lead`.
 
 ## SEO implementado
 Canonical, meta description, Open Graph, Twitter Card, datos estructurados ProfessionalService, robots.txt, sitemap.xml y etiquetas de indexación. Registra `https://codigo8solutions.com` en Google Search Console y envía `https://codigo8solutions.com/sitemap.xml`.
 
 ## Producto LogiSaaS
-Menú "Productos" (mega menú) y sección `#productos`. El video y la información se abren en el modal `#logisaasModal`; el enlace `#logisaas` abre el modal directamente. Video: `assets/video/logisaas.mp4` y la portada `assets/images/logisaas-poster.webp`. El botón "Solicitar demo" preselecciona LogiSaaS en el formulario. Con la analítica aceptada se registran `product_view`, `video_start` y `demo_request_click`.
+Menú "Productos" (mega menú) y sección `#productos`. El video y la información se abren en el modal `#logisaasModal`; el enlace `#logisaas` abre el modal directamente. Video: `assets/video/logisaas.mp4` y la portada `assets/images/logisaas-poster.webp`. El botón "Solicitar demo" preselecciona LogiSaaS en el formulario. Se registran `product_view`, `video_start` y `demo_request_click`.
