@@ -12,6 +12,10 @@
     gtag("js",new Date());
     gtag("config",id,{anonymize_ip:true,send_page_view:true});
     document.querySelectorAll('a[href*="wa.me"]').forEach(a=>a.addEventListener("click",()=>gtag("event","whatsapp_click",{link_url:a.href})));
+    const video=document.querySelector("#logisaasModal video");
+    if(video)video.addEventListener("play",()=>gtag("event","video_start",{video_title:"LogiSaaS"}),{once:true});
+    document.getElementById("logisaasModal")?.addEventListener("shown.bs.modal",()=>gtag("event","product_view",{product:"LogiSaaS"}));
+    document.querySelectorAll("[data-service]").forEach(a=>a.addEventListener("click",()=>gtag("event","demo_request_click",{product:"LogiSaaS"})));
     const form=document.getElementById("form");
     if(form)form.addEventListener("submit",()=>gtag("event","generate_lead",{form_name:"contacto"}));
   }
